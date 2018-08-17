@@ -1,7 +1,7 @@
 #define NUM_THREADS 32
 #define NUM_BLOCKS 1024
 
-#include "math_constants.h"
+#define CUDART_INF_F __int_as_float(0x7f800000)
 
 __global__ void convert_kernel(float * dist, size_t pitch_dist, size_t n)
 {
