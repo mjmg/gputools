@@ -1,6 +1,8 @@
 #define NUM_THREADS 32
 #define NUM_BLOCKS 1024
 
+#include "math_constants.h"
+
 __global__ void convert_kernel(float * dist, size_t pitch_dist, size_t n)
 {
   for(size_t index = threadIdx.x; index < n; index += NUM_THREADS) {
